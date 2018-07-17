@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+  </head>
+  <body>
+    <a-scene altspace="fullspace:true">
+            <a-assets>
+                    <img id="sky" src="360.jpg">
+            </a-assets>
+                
+
+<!--
+
+      <a-entity  n-gltf="url:canyon2a.glb"  n-mesh-collider="type:environment;convex:false" position="-14.912 1.13 -15.596" scale="63.633 63.633 63.633" ></a-entity>
+        <a-entity  n-gltf="url:canyon2a.glb" n-mesh-collider="type:environment;convex:false" position="-14.912 1.13 31.222" scale="63.633 63.633 63.633" rotation="0 -180 0" ></a-entity>
+           <a-entity n-mesh-collider="type: environment" n-gltf="url:canyon2a.glb"  position="-14.912 1.13 -15.596" scale="63.633 63.633 63.633" ></a-entity>
+        <a-entity n-mesh-collider="type: environment" n-gltf="url:canyon2a.glb"  position="-14.912 1.13 31.222" scale="63.633 63.633 63.633" rotation="0 -180 0" ></a-entity>
+ 
+        <a-gltf-model gltf-model="canyon2a.glb" position="-14.912 1.13 -15.596" scale="63.633 63.633 63.633"></a-gltf-model>
+        <a-gltf-model gltf-model="canyon2a.glb" position="-14.912 1.13 31.222" scale="63.633 63.633 63.633" rotation="0 -180 0"></a-gltf-model>
+          <a-obj-model src="canyon2.obj" mtl="canyon2.mtl" position="-14.912 -16.063 -7.462" rotation="-90.01166961505233 179.1639025374084 0.8594366926962348" material=""></a-obj-model>
+         
+  -->
+  <a-entity id="canyon" position="-38.357 0 -0.376" rotation="0 -172.1165216572993 0">
+        <a-obj-model src="cyn.obj" mtl="cyn.mtl" position="-154.375 -13.813 -7.436" material="" n-mesh-collider="type:environment;convex:false" rotation="-5.672282171795151 0 0"></a-obj-model>
+        <a-obj-model src="cyn.obj" mtl="cyn.mtl" position="-14.984 -13.813 -7.436" material="" n-mesh-collider="type:environment;convex:false" rotation="-3.8961130068895984 179.96604345059157 0"></a-obj-model>
+
+<a-entity id="rock" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" scale="31.05 54.331 31.05" material="src:rock.jpg"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-2" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-2.879 0 -24.289" rotation="-20.168 0.516 -2.922" scale="25.949 45.406 25.949"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-5" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-169.839 0 -47.407" rotation="-20.168 0.516 -2.922" scale="25.949 45.406 25.949"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-6" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-174.658 0 -12.604" rotation="-48.12845479098915 3.953408786402681 -8.88084582452776" scale="16.376 45.406 25.949"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-7" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-193.172 0 32.19" rotation="-0.4583662361046586 -57.06659639503 96.42879692051756" scale="16.376 45.406 25.949"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-8" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-168.764 0 35.57" rotation="-0.4583662361046586 -57.06659639503 96.42879692051756" scale="16.376 45.406 25.949"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-9" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-45.944 -3.869 -5.828" rotation="0.63 1.49 89.782" scale="2.076 120.265 14.447"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-3" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-14.777 0 -51.743" rotation="-20.168114388604977 0.5156620156177408 -2.9220847551671985" scale="11.317 19.801 11.317"></a-entity>
+<a-entity material="src:rock.jpg" id="rock-4" geometry="primitive:dodecahedron" n-mesh-collider="type:environment;convex:false" position="-25.195 0 23.493" rotation="-20.168114388604977 0.5156620156177408 -2.9220847551671985" scale="11.317 19.801 11.317"></a-entity>
+
+     </a-entity>
+
+     <a-entity id="tower" position="75.416 0 27.312">
+            <a-entity id="struct" geometry="radiusBottom:1.52;primitive:cone;radiusTop:0.83" material="src:rust.jpg" position="-8.08 1.583 -3.568" scale="3.03 11.884 3.03"></a-entity><a-entity id="struct-7" geometry="primitive:cone;radiusTop:0.83" material="src:rust.jpg" position="-8.08 2.912 -3.568" scale="2.675 10.492 2.675"></a-entity><a-entity id="struct-8" geometry="primitive:cone;radiusTop:0.5599999999999999" material="color:#800000;src:rust.jpg" position="-8.08 8.46 -3.568" scale="1.641 0.873 1.641" rotation="0 0 -180"></a-entity>
+            <a-entity position="-7.961 8.651 -3.537" scale="1.863 1.863 1.497" geometry="primitive:sphere;phiLength:180" material="side:double;src:rust.jpg" rotation="-90.012 180.023 180.023"></a-entity>
+        </a-entity>
+        <a-entity id="tower-2" position="90.79 7.576 20.052">
+                <a-entity id="hemi" geometry="primitive:cone;radiusTop:0.87" material="src:rust.jpg" scale="11.93 12.105 11.93" position="1.763 2.967 4.978"></a-entity>
+                <a-entity id="struct-3" geometry="primitive:cone;radiusTop:0.87" material="src:rust.jpg;color:#800000" scale="8.821 2.109 8.821" position="1.763 9.328 4.978"></a-entity><a-entity id="struct-2" geometry="primitive:cone;radiusTop:0.71" material="src:rust.jpg" scale="12.267 1.754 12.267" position="1.763 7.66 4.978"></a-entity><a-entity id="struct-4" geometry="primitive:cone;radiusTop:0.71" material="src:rust.jpg" scale="10.728 1.535 10.728" position="1.763 10.339 4.978"></a-entity><a-entity id="struct-5" geometry="primitive:cone;radiusTop:0.37999999999999995" material="src:rust.jpg" scale="7.24 1.036 7.24" position="1.763 11.968 4.978"></a-entity><a-entity id="struct-6" geometry="primitive:sphere" material="src:rust.jpg" scale="1.886 1.886 1.886" position="1.763 12.598 4.978"></a-entity>
+
+            </a-entity>
+            <a-entity id="tower-3" position="102.333 7.576 20.052">
+                    <a-entity id="struct" geometry="radiusBottom:1.25;radiusTop:0.67;primitive:cone" material="src:rust.jpg" scale="3.676 39.733 3.676" position="4.615 0.96 0.483"></a-entity><a-entity id="struct-10" geometry="primitive:cone;radiusTop:0.67" material="src:rust.jpg" scale="3.676 1.529 3.676" position="4.615 18.041 0.483"></a-entity>
+                    <a-entity scale="3.619 3.619 2.908" geometry="primitive:sphere;phiLength:180" material="side:double;src:rust.jpg" rotation="-90.012 180.023 180.023" position="4.645 20.576 0.291"></a-entity>
+                </a-entity>
+                <a-entity id="tower-4" position="96.351 7.576 12.498">
+                        <a-entity id="struct" geometry="radiusBottom:1.43;primitive:cone;radiusTop:0.8" material="src:rust.jpg" scale="3.602 16.071 3.602" position="-0.002 -5.931 -1.282"></a-entity><a-entity id="struct-9" geometry="primitive:cone;radiusBottom:1.2;radiusTop:0.8" material="color:#000000;src:rust.jpg" scale="2.245 2.387 2.151" position="0.067 3.164 -1.409"></a-entity>
+                        <a-entity position="-0.244 2.468 -1.284" scale="3.619 3.619 2.908" geometry="primitive:sphere;phiLength:180" material="side:double;src:rust.jpg" rotation="-90.012 180.023 180.023"></a-entity>
+                    </a-entity>
+                   
+    <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+<!--  -->
+  <a-sky src="#sky" radius="2500"></a-sky>
+
+    </a-scene>
+<!--
+https://coolors.co/fcecc9-daa89b-c78461-ffcab1-edd4b2
+-->
+</body></html>
